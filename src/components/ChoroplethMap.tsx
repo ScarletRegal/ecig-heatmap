@@ -32,7 +32,7 @@ const ChoroplethMap = () => {
         const fetchInitialData = async () => {
             try {
                 // Fetch the list of available quarters to populate dropdowns
-                const quartersRes = await fetch('/data/quarters_list.json');
+                const quartersRes = await fetch('data/quarters_list.json');
                 const quartersData = await quartersRes.json();
                 setQuarters(quartersData);
                 // Set default date range to be the full range
@@ -40,7 +40,7 @@ const ChoroplethMap = () => {
                 setEndQuarter(quartersData[quartersData.length - 1]);
 
                 // Fetch the geographic shapes for the map
-                const shapesRes = await fetch('/data/zip3-shapes.json');
+                const shapesRes = await fetch('data/zip3-shapes.json');
                 const shapesData = await shapesRes.json();
                 setGeoJsonData(shapesData);
 
@@ -73,7 +73,7 @@ const ChoroplethMap = () => {
 
             // Create an array of fetch promises for each file in the selected range
             const promises = quartersToFetch.map(q =>
-                fetch(`/data/${q}.json`).then(res => res.json())
+                fetch(`data/${q}.json`).then(res => res.json())
             );
 
             try {

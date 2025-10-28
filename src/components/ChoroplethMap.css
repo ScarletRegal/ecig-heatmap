@@ -1,0 +1,62 @@
+/* This wrapper ensures the map and overlays are positioned correctly */
+.map-wrapper {
+    position: relative;
+}
+
+.map-container {
+    width: 100%;
+    aspect-ratio: 3/2;
+}
+
+/* Styles for the control panel (dropdowns) */
+.controls-container {
+    display: flex;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.field {
+    display: flex;
+    gap: 4px;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.controls-container label {
+    font-weight: bold;
+    font-size: 14px;
+    width: fit-content;
+    color: #888;
+}
+
+.controls-container select {
+    min-width: 120px;
+    padding: 12px 8px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background: #f5f5f5;
+    color: #212529;
+}
+
+.quarter-container {
+    display: flex;
+    gap: 12px;
+    flex-direction: row;
+}
+
+/* Styles for the loading overlay */
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2000;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}

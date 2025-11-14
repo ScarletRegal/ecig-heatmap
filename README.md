@@ -4,8 +4,6 @@ These are instructions for the URMC RCOE Heatmap
 
 After the repository is transferred to the correct account, there will be some lines of code that need to be changed.
 
-This will assume that the person doing this process knows how to make a GitHub page.
-
 ## package.json
 - Locate the "homepage" field (Line 6)
 - Change the field of "http://ScarletRegal.github.io/ecig-heatmap" to "http://YourUsername.github.io/page-name"
@@ -20,4 +18,12 @@ This will assume that the person doing this process knows how to make a GitHub p
 - All of the proper packages should be installed so...
 - Connect to your GitHub repo via VSCode
 - Use "npm run deploy" in the terminal on your device to push the deployment "dist" folder to GitHub
+- Under "Settings" and "Pages" in GitHub, choose to "Deploy from branch"
+- Choose to deploy from "gh-pages"
+- Deploy website
+
+## Fix Framer
+- In Framer, locate the /e-cig-calculator page
+- Find the iframe that holds the embed
+- Change the URL to the new URL
 
